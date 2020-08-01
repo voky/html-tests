@@ -28,12 +28,12 @@
         </div>
         <div class="prev-nav">
             <a href="#"
-                onclick="this.parentNode.parentNode.children[0].scrollBy({top: 0, left: -50, behavior: 'smooth'});if( this.parentNode.parentNode.children[0].scrollLeft <= 0){this.parentNode.parentNode.children[0].scrollTo({top: 0, left: this.parentNode.parentNode.children[0].scrollWidth, behavior: 'smooth'});};">‹</a>
+                onclick="var cO=this.parentNode.parentNode.children[0].children[0].offsetWidth;this.parentNode.parentNode.children[0].scrollBy({top: 0, left: -cO * Math.floor((this.parentNode.parentNode.children[0].offsetWidth / cO)), behavior: 'smooth'});if( this.parentNode.parentNode.children[0].scrollLeft <= 0){this.parentNode.parentNode.children[0].scrollTo({top: 0, left: this.parentNode.parentNode.children[0].scrollWidth, behavior: 'smooth'});};">‹</a>
         </div>
 
         <div class="next-nav">
             <a href="#"
-                onclick="this.parentNode.parentNode.children[0].scrollBy({top: 0, left: 50, behavior: 'smooth'});if( (this.parentNode.parentNode.children[0].offsetWidth + this.parentNode.parentNode.children[0].scrollLeft) >= (this.parentNode.parentNode.children[0].scrollWidth - 1 )){this.parentNode.parentNode.children[0].scrollTo({top: 0, left: 0, behavior: 'smooth'});};">›</a>
+                onclick="var cO=this.parentNode.parentNode.children[0].children[0].offsetWidth;this.parentNode.parentNode.children[0].scrollBy({top: 0, left: cO * Math.floor((this.parentNode.parentNode.children[0].offsetWidth / cO)), behavior: 'smooth'});if( (this.parentNode.parentNode.children[0].offsetWidth + this.parentNode.parentNode.children[0].scrollLeft) >= (this.parentNode.parentNode.children[0].scrollWidth - 1 )){this.parentNode.parentNode.children[0].scrollTo({top: 0, left: 0, behavior: 'smooth'});};">›</a>
 
         </div>
     </div>

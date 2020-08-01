@@ -101,9 +101,9 @@ img {
     justify-content:center;
 }
 
-.prev-nav:hover, .next-nav:hover {
+/* .prev-nav:hover, .next-nav:hover {
     background-color: rgba(255,255,255,0.3);
-}
+} */
 
 @-moz-document url-prefix() {
     .prev-nav, .next-nav {
@@ -133,7 +133,7 @@ img {
     font-size: 6em;
     /* background: white; */
     width: 80px;
-    padding: 100% 0px;
+    /* padding: 40px 0px; */
     /* padding: 20px; */
     /* margin: 20px 0; */
     text-align: center;

@@ -107,6 +107,12 @@ img {
         height: calc(100% - 18px);
     }
   }
+@supports (-webkit-touch-callout: none) {
+    /* CSS specific to iOS devices */ 
+    .prev-nav, .next-nav {
+        height: 100%;
+    }
+}
 
 .prev-nav {
     left: 0;

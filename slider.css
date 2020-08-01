@@ -94,28 +94,14 @@ img {
 .prev-nav, .next-nav {
     position: absolute;
     top: 0;
-    height: calc(100% - 10px);
+    /* height: calc(100% - 10px); */
     width: 5em;
     display: flex;
     align-items:center;
     justify-content:center;
-}
-
-/* .prev-nav:hover, .next-nav:hover {
-    background-color: rgba(255,255,255,0.3);
-} */
-
-@-moz-document url-prefix() {
-    .prev-nav, .next-nav {
-        height: calc(100% - 18px);
-    }
-}
-
-@supports (-webkit-touch-callout: none) {
-    /* CSS specific to iOS devices */ 
-    .prev-nav, .next-nav {
-        height: 100%;
-    }
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
 }
 
 .prev-nav {
@@ -132,10 +118,10 @@ img {
     text-decoration: none;
     font-size: 6em;
     /* background: white; */
-    width: 80px;
+    /* width: 4em; */
     /* padding: 40px 0px; */
     /* padding: 20px; */
     /* margin: 20px 0; */
     text-align: center;
     z-index: 1;
-    }
+}

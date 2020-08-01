@@ -99,14 +99,18 @@ img {
     display: flex;
     align-items:center;
     justify-content:center;
-    background-color: wheat;
+}
+
+.prev-nav:hover, .next-nav:hover {
+    background-color: rgba(255,255,255,0.3);
 }
 
 @-moz-document url-prefix() {
     .prev-nav, .next-nav {
         height: calc(100% - 18px);
     }
-  }
+}
+
 @supports (-webkit-touch-callout: none) {
     /* CSS specific to iOS devices */ 
     .prev-nav, .next-nav {
@@ -121,3 +125,17 @@ img {
 .next-nav {
     right: 0;
 }
+
+.prev-nav > a, .next-nav > a {
+    position: absolute;
+    color: black;
+    text-decoration: none;
+    font-size: 6em;
+    /* background: white; */
+    width: 80px;
+    padding: 100% 0px;
+    /* padding: 20px; */
+    /* margin: 20px 0; */
+    text-align: center;
+    z-index: 1;
+    }

@@ -51,8 +51,6 @@
         };
     
         function scrollCarousel(el, items, right){
-            console.log('scrollCarousel');
-            console.log(items);
             var firstVisible,lastVisible, toScroll=0;
             for (i=0;i<items.length;i++){
                 var isVisible = isElementInViewport(items[i]);
@@ -62,15 +60,13 @@
                 if(firstVisible!=null && !isVisible){lastVisible=i-1;break;}
                 if(i==items.length-1){lastVisible=i; if(firstVisible==null){firstVisible=i;}break;}
             }
-            console.log("First Visible Item: "+firstVisible+" Last Visible Item: "+lastVisible);
             if(right)
             {
                 if((el.scrollWidth - (el.scrollLeft+toScroll)) < toScroll) {toScroll = -el.scrollWidth}
             }
             else
             {toScroll = -toScroll; if(el.scrollLeft <= 0) {toScroll=el.scrollWidth}}
-            console.log('Scroll to: '+toScroll);
-            el.scrollBy({top: 0, left: toScroll, behavior : 'smooth'});
+            el.scroll((el.scrollLeft+toScroll),0);
         };
     
     </script>

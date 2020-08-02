@@ -37,11 +37,13 @@ scroll-behavior: smooth;
     flex: none;
     display: flex;
     min-height: min-content; /* needs vendor prefixes */
+    /* scroll-snap-type: x mandatory; */
   }
   
   .carouselview-component > .carousel > .carousel-content > div {
   padding: 0 2px;
   transition: 250ms all;
+  scroll-snap-align: start;
   }
   
   .carouselview-component > .carousel > .carousel-content > div:hover {

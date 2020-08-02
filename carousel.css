@@ -46,10 +46,12 @@ scroll-behavior: smooth;
   scroll-snap-align: start;
   }
   
+  @media(hover: hover) {
   .carouselview-component > .carousel > .carousel-content > div:hover {
   margin: 0 40px;
   transform: scale(1.2);
   }
+}
 
 .prev-nav, .next-nav {
     position: absolute;

@@ -1,5 +1,10 @@
-* {
-  box-sizing: border-box;
+:root {
+    /* Basic Colors */
+    --color-primary-h:355;
+    --color-primary-s:86%;
+    --color-primary-l:59%;
+    --color-primary: hsl(var(--color-primary-h),var(--color-primary-s),var(--color-primary-l));
+    --color-primary-light: hsl(var(--color-primary-h),var(--color-primary-s),calc(var(--color-primary-l) + 20%));
 }
 
 .slider {
@@ -15,13 +20,13 @@
   width:100%;
   height: 100%;
 
-  overflow-x: scroll;
+  overflow-x: auto;
 
   scroll-snap-type: x mandatory;
     
   scroll-behavior: smooth;
   -webkit-overflow-scrolling: touch;  
-  scrollbar-color: black transparent;
+  scrollbar-color: var(--color-primary) transparent;
   /*
   scroll-snap-points-x: repeat(300px);
   scroll-snap-type: mandatory;
@@ -33,7 +38,7 @@
     height: 10px;
   }
   .slides::-webkit-scrollbar-thumb {
-    background: black;
+    background: var(--color-primary);
     border-radius: 10px;
   }
   .slides::-webkit-scrollbar-track {
@@ -114,7 +119,7 @@ img {
 
 .prev-nav > a, .next-nav > a {
     position: absolute;
-    color: black;
+    color: var(--color-primary);
     text-decoration: none;
     font-size: 6em;
     /* background: white; */

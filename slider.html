@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Slider</title>
+    <title>Document</title>
     <link rel="stylesheet" href="slider.css">
 </head>
 
@@ -54,7 +54,6 @@
             var firstVisible,lastVisible, toScroll=0;
             for (i=0;i<items.length;i++){
                 var isVisible = isElementInViewport(items[i]);
-                console.log(isVisible);
                 if(isVisible){toScroll += items[i].offsetWidth};
                 if(firstVisible==null && isVisible){firstVisible=i;}
                 if(firstVisible!=null && !isVisible){lastVisible=i-1;break;}
@@ -66,11 +65,10 @@
             }
             else
             {toScroll = -toScroll; if(el.scrollLeft <= 0) {toScroll=el.scrollWidth}}
-            el.scroll((el.scrollLeft+toScroll),0);
-        };
-    
+            if(toScroll == 0) {toScroll = el.offsetWidth}
+            el.scrollLeft = (el.scrollLeft+toScroll);
+        };    
     </script>
-
 </body>
 
 </html>

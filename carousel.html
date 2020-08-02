@@ -116,10 +116,9 @@
             }
             else
             {toScroll = -toScroll; if(el.scrollLeft <= 0) {toScroll=el.scrollWidth}}
+            if(toScroll == 0) {toScroll = el.offsetWidth}
             el.scrollLeft = (el.scrollLeft+toScroll);
-            // el.scroll((el.scrollLeft+toScroll),0);
-        };
-    
+        };    
     </script>
 </body>
 

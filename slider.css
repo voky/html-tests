@@ -131,8 +131,8 @@ img {
     z-index: 1;
 }
 
-/* @supports (-webkit-touch-callout: none) {
+@supports (-webkit-touch-callout: none) {
   .prev-nav, .next-nav {
    visibility: collapse;
  }
-} */
+}

@@ -130,3 +130,9 @@ img {
     text-align: center;
     z-index: 1;
 }
+
+@supports (-webkit-touch-callout: none) {
+ .prev-nav, .next.nav {
+   visibility: collapse;
+ }
+}

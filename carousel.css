@@ -1,10 +1,18 @@
 :root {
-    /* Basic Colors */
-    --color-primary-h:355;
-    --color-primary-s:86%;
-    --color-primary-l:59%;
-    --color-primary: hsl(var(--color-primary-h),var(--color-primary-s),var(--color-primary-l));
-    --color-primary-light: hsl(var(--color-primary-h),var(--color-primary-s),calc(var(--color-primary-l) + 20%));
+  /* Basic Colors */
+  --color-primary-h: 355;
+  --color-primary-s: 86%;
+  --color-primary-l: 59%;
+  --color-primary: hsl(
+    var(--color-primary-h),
+    var(--color-primary-s),
+    var(--color-primary-l)
+  );
+  --color-primary-light: hsl(
+    var(--color-primary-h),
+    var(--color-primary-s),
+    calc(var(--color-primary-l) + 20%)
+  );
 }
 
 /*
@@ -12,84 +20,87 @@
 */
 
 .carouselview-component {
-    position: relative;
-  }
-  
-.carouselview-component > .carousel {
-flex: 1;
-display: flex;
-overflow-y: hidden;
-overflow-x: auto;
-position: relative;
--ms-overflow-style: none;  /* IE and Edge */
-scrollbar-width: none;  /* Firefox */
-scroll-snap-type: x mandatory;
-
-scroll-behavior: smooth;
--webkit-overflow-scrolling: touch; 
+  position: relative;
 }
-  
-  .carouselview-component > .carousel::-webkit-scrollbar{
+
+.carouselview-component > .carousel {
+  flex: 1;
+  display: flex;
+  overflow-y: hidden;
+  overflow-x: auto;
+  position: relative;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+  scroll-snap-type: x mandatory;
+
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+
+.carouselview-component > .carousel::-webkit-scrollbar {
   display: none;
-  }
-  .carouselview-component > .carousel > .carousel-content {
-    margin: 20px 0;
-    flex: none;
-    display: flex;
-    min-height: min-content; /* needs vendor prefixes */
-    /* scroll-snap-type: x mandatory; */
-  }
-  
-  .carouselview-component > .carousel > .carousel-content > div {
+}
+.carouselview-component > .carousel > .carousel-content {
+  margin: 20px 0;
+  flex: none;
+  display: flex;
+  min-height: min-content; /* needs vendor prefixes */
+  /* scroll-snap-type: x mandatory; */
+}
+
+.carouselview-component > .carousel > .carousel-content > div {
   padding: 0 2px;
   transition: 250ms all;
   scroll-snap-align: start;
-  }
-  
-  @media(hover: hover) {
+}
+
+@media (hover: hover) {
   .carouselview-component > .carousel > .carousel-content > div:hover {
-  margin: 0 40px;
-  transform: scale(1.2);
+    margin: 0 40px;
+    transform: scale(1.2);
   }
 }
 
-.prev-nav, .next-nav {
-    position: absolute;
-    top: 0;
-    /* height: calc(100% - 10px); */
-    width: 5em;
-    display: flex;
-    align-items:center;
-    justify-content:center;
-    top: 50%;
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
+.prev-nav,
+.next-nav {
+  position: absolute;
+  top: 0;
+  /* height: calc(100% - 10px); */
+  width: 5em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
 }
 
 .prev-nav {
-    left: 0;
+  left: 0;
 }
 
 .next-nav {
-    right: 0;
+  right: 0;
 }
 
-.prev-nav > a, .next-nav > a {
-    position: absolute;
-    color: var(--color-primary);
-    text-decoration: none;
-    font-size: 6em;
-    /* background: white; */
-    /* width: 4em; */
-    /* padding: 40px 0px; */
-    /* padding: 20px; */
-    /* margin: 20px 0; */
-    text-align: center;
-    z-index: 1;
+.prev-nav > a,
+.next-nav > a {
+  position: absolute;
+  color: var(--color-primary);
+  text-decoration: none;
+  font-size: 6em;
+  /* background: white; */
+  /* width: 4em; */
+  /* padding: 40px 0px; */
+  /* padding: 20px; */
+  /* margin: 20px 0; */
+  text-align: center;
+  z-index: 1;
 }
 
 @supports (-webkit-touch-callout: none) {
-    .prev-nav, .next-nav {
-     visibility: collapse;
-   }
+  .prev-nav,
+  .next-nav {
+    visibility: collapse;
   }
+}

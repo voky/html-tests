@@ -132,7 +132,7 @@ img {
 }
 
 @supports (-webkit-touch-callout: none) {
- .prev-nav, .next.nav {
+  .prev-nav, .next-nav {
    visibility: collapse;
  }
 }

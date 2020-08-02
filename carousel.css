@@ -1,3 +1,12 @@
+:root {
+    /* Basic Colors */
+    --color-primary-h:355;
+    --color-primary-s:86%;
+    --color-primary-l:59%;
+    --color-primary: hsl(var(--color-primary-h),var(--color-primary-s),var(--color-primary-l));
+    --color-primary-light: hsl(var(--color-primary-h),var(--color-primary-s),calc(var(--color-primary-l) + 20%));
+}
+
 /*
   This is a Netflix inspired CSS Carousel view
 */
@@ -6,19 +15,19 @@
     position: relative;
   }
   
-  .carouselview-component > .carousel {
-    flex: 1;
-    display: flex;
-    overflow-y: hidden;
-    overflow-x: auto;
-    position: relative;
-    -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;  /* Firefox */
-    scroll-snap-type: x mandatory;
-    
-    scroll-behavior: smooth;
-    -webkit-overflow-scrolling: touch; 
-  }
+.carouselview-component > .carousel {
+flex: 1;
+display: flex;
+overflow-y: hidden;
+overflow-x: auto;
+position: relative;
+-ms-overflow-style: none;  /* IE and Edge */
+scrollbar-width: none;  /* Firefox */
+scroll-snap-type: x mandatory;
+
+scroll-behavior: smooth;
+-webkit-overflow-scrolling: touch; 
+}
   
   .carouselview-component > .carousel::-webkit-scrollbar{
   display: none;
@@ -39,39 +48,8 @@
   margin: 0 40px;
   transform: scale(1.2);
   }
-  
-  .carouselview-component > .carousel-slider > a {
-  position: absolute;
-  color: black;
-  text-decoration: none;
-  font-size: 6em;
-  background: white;
-  width: 80px;
-  padding: 20px;
-  margin: 20px 0;
-  text-align: center;
-  z-index: 1;
-  }
-  
-  .carouselview-component > .carousel-slider > a:nth-of-type(1) {
-  top: 0;
-  bottom: 0;
-  left: 0;
-  background: linear-gradient(-90deg, rgba(255, 255, 255, 0) 0%, white 100%);
-  }
-  
-  .carouselview-component > .carousel-slider > a:nth-of-type(2) {
-  top: 0;
-  bottom: 0;
-  right: 0;
-  background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, white 100%);
-  }
-  
-  .carouselview-component > .carousel-slider > .right {
-  float:right;
-  }
-  
-  .prev-nav, .next-nav {
+
+.prev-nav, .next-nav {
     position: absolute;
     top: 0;
     /* height: calc(100% - 10px); */

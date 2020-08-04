@@ -19,15 +19,14 @@
   This is a Netflix inspired CSS Carousel view
 */
 
-.carouselview-component {
+.carousel-component {
   position: relative;
 }
 
-.carouselview-component > .carousel {
+.carousel-component > .carousel {
   flex: 1;
   display: flex;
-  overflow-y: hidden;
-  overflow-x: auto;
+  overflow-x: scroll;
   position: relative;
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
@@ -37,70 +36,63 @@
   -webkit-overflow-scrolling: touch;
 }
 
-.carouselview-component > .carousel::-webkit-scrollbar {
+.carousel-component > .carousel::-webkit-scrollbar {
   display: none;
 }
-.carouselview-component > .carousel > .carousel-content {
-  margin: 20px 0;
+.carousel-component > .carousel > .carousel-content {
+  margin: 40px 0;
   flex: none;
   display: flex;
   min-height: min-content; /* needs vendor prefixes */
-  /* scroll-snap-type: x mandatory; */
 }
 
-.carouselview-component > .carousel > .carousel-content > div {
+.carousel-component > .carousel > .carousel-content > div {
   padding: 0 2px;
   transition: 250ms all;
   scroll-snap-align: start;
 }
 
 @media (hover: hover) {
-  .carouselview-component > .carousel > .carousel-content > div:hover {
+  .carousel-component > .carousel > .carousel-content > *:hover {
     margin: 0 40px;
-    transform: scale(1.2);
+    transform: scale(1.1);
   }
 }
 
-.prev-nav,
-.next-nav {
+.carousel-component > div > .prev-nav, .carousel-component > div > .next-nav {
   position: absolute;
   top: 0;
   /* height: calc(100% - 10px); */
   width: 5em;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items:center;
+  justify-content:center;
   top: 50%;
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
 }
 
-.prev-nav {
+.carousel-component > div > .prev-nav {
   left: 0;
 }
 
-.next-nav {
+.carousel-component > div > .next-nav {
   right: 0;
 }
 
-.prev-nav > a,
-.next-nav > a {
+.carousel-component > div > .prev-nav > a, .carousel-component > div > .next-nav > a {
   position: absolute;
   color: var(--color-primary);
   text-decoration: none;
   font-size: 6em;
-  /* background: white; */
-  /* width: 4em; */
-  /* padding: 40px 0px; */
-  /* padding: 20px; */
-  /* margin: 20px 0; */
   text-align: center;
   z-index: 1;
+  cursor: pointer;
 }
 
-@supports (-webkit-touch-callout: none) {
-  .prev-nav,
-  .next-nav {
+/* @supports (-webkit-touch-callout: none) {
+  .carousel-component > div > .prev-nav,
+  .carousel-component > div > .next-nav {
     visibility: collapse;
   }
-}
+} */

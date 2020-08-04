@@ -79,7 +79,7 @@ function scrollCarousel(el, items, right) {
         else {scrollTo=items[lastVisible+visibleElements];}
     } else {
         if(firstVisible==0){scrollTo=items[items.length-1];}
-        else if((firstVisible-visibleElemets) < 0) {scrollTo=items[0];}
+        else if((firstVisible-visibleElements) < 0) {scrollTo=items[0];}
         else { scrollTo=items[firstVisible-visibleElements];}
     }
     scrollTo.scrollIntoView({behavior:  "smooth"});

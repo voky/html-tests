@@ -44,17 +44,19 @@
     </div>
 
     <script>
-        //Checks if element is fully in Viewport
-        function isElementInViewport (el) {
-            var rect = el.getBoundingClientRect();
-            return (
-                rect.top >= 0 &&
-                rect.left >= 0 &&
-                rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) && /* or $(window).height() */
-                rect.right <= (window.innerWidth || document.documentElement.clientWidth) /* or $(window).width() */
-            );
-        };
-    
+//Checks if element is fully in Viewport
+function isElementInViewportWidth(el) {
+    var rect = el.getBoundingClientRect();
+    // console.log(rect);
+    // console.log(window.innerWidth + ' ' + document.documentElement.clientWidth );
+    return (
+        // rect.top >= 0 &&
+        rect.left >= 0 &&
+        // rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) && /* or $(window).height() */
+        Math.floor(rect.right) <= (window.innerWidth || document.documentElement.clientWidth) /* or $(window).width() */
+    );
+};
+
 function scrollCarousel(el, items, right) {
     var firstVisible, lastVisible, toScroll = 0;
     for (i = 0; i < items.length; i++) {
@@ -81,7 +83,7 @@ function scrollCarousel(el, items, right) {
     // console.log(el);
     // console.log(items);
     // console.log('toScroll: '+toScroll+' firstVisible: '+firstVisible+' lastVisible: '+lastVisible+' scrollLeft: '+el.scrollLeft+' scrollWidth: '+el.scrollWidth);
-};   
+}; 
     </script>
 </body>
 

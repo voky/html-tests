@@ -20,17 +20,17 @@
 }
 
 /* 
-  This is fullscreen Carousel Slider
+  This is Carousel Slider
 */
 
-.slider {
+.slider-component {
   position: relative;
   width: 100%;
   text-align: center;
   overflow: hidden;
 }
 
-.slides {
+.slider-component > .slides {
   display: flex;
   width: 100%;
   height: 100%;
@@ -41,19 +41,19 @@
   scrollbar-color: var(--color-primary) transparent;
 }
 
-.slides::-webkit-scrollbar {
+.slider-component > .slides::-webkit-scrollbar {
   width: 10px;
   height: 10px;
 }
-.slides::-webkit-scrollbar-thumb {
+.slider-component > .slides::-webkit-scrollbar-thumb {
   background: var(--color-primary);
   border-radius: 10px;
 }
-.slides::-webkit-scrollbar-track {
+.slider-component > .slides::-webkit-scrollbar-track {
   background: transparent;
 }
 
-.slides > div {
+.slider-component > .slides > div {
   scroll-snap-align: start;
   flex-shrink: 0;
   width: 100%;
@@ -64,21 +64,21 @@
   position: relative;
 }
 
-.slider-counter {
+.slider-component .slider-counter {
   text-align:center;
   position:absolute;
   bottom:20px;
   width:100%;
 }
 
-.slider-counter > label {
+.slider-component .slider-counter > label {
   font-size: 1.5em;
   color: var(--color-primary);
-  text-shadow: 0 0 4px black;
+  text-shadow: 0 0 1px black;
 }
 
-.prev-nav,
-.next-nav {
+.slider-component > .prev-nav,
+.slider-component > .next-nav {
   position: absolute;
   top: 0;
   width: 5em;
@@ -90,22 +90,23 @@
   transform: translateY(-50%);
 }
 
-.prev-nav {
+.slider-component > .prev-nav {
   left: 0;
 }
 
-.next-nav {
+.slider-component > .next-nav {
   right: 0;
 }
 
-.prev-nav > a,
-.next-nav > a {
+.slider-component > .prev-nav > a,
+.slider-component > .next-nav > a {
   position: absolute;
   color: var(--color-primary);
   text-decoration: none;
   font-size: 6em;
   text-align: center;
   z-index: 1;
+  cursor: pointer;
 }
 
 /* @supports (-webkit-touch-callout: none) {

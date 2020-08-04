@@ -72,11 +72,11 @@ function scrollCarousel(el, items, right) {
     if (toScroll == 0) { toScroll = el.offsetWidth }
 //     el.scrollBy({top:0,left:toScroll,behavior:"smooth"});// = (el.scrollLeft + toScroll);
     if(right) {
-        if(lastVisible==(items.length-1)){items[0].scrollIntoView({behavior:  "smooth"});}
-        else {items[lastVisible+1].scrollIntoView({behavior:  "smooth"});}
+        if(lastVisible==(items.length-1)){items[0].scrollIntoView();}
+        else {items[lastVisible+1].scrollIntoView();}
     } else {
-        if(firstVisible==0){items[items.length-1].scrollIntoView({behavior:  "smooth"});}
-        else {items[firstVisible-1].scrollIntoView({behavior:  "smooth"});}
+        if(firstVisible==0){items[items.length-1].scrollIntoView();}
+        else {items[firstVisible-1].scrollIntoView();}
     }
     // console.log(el);
     // console.log(items);
